@@ -250,7 +250,7 @@ TorrentRendererFull.prototype =
 		if (!t.isStopped() && (!is_done || t.seedRatioLimit(controller)>0)) {
 			c.push(' - ');
 			var eta = t.getETA();
-			if (eta < 0 || eta >= (999*60*60) /* arbitrary */)
+			if (eta <= 0 || eta >= (999*60*60) /* arbitrary */)
 				c.push('remaining time unknown');
 			else
 				c.push(Transmission.fmt.timeInterval(t.getETA()),

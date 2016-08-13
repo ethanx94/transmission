@@ -192,7 +192,7 @@ Transmission.fmt = (function()
 			    d = days    + ' ' + (days    > 1 ? 'days'    : 'day'),
 			    h = hours   + ' ' + (hours   > 1 ? 'hours'   : 'hour'),
 			    m = minutes + ' ' + (minutes > 1 ? 'minutes' : 'minute'),
-			    s = seconds + ' ' + (seconds > 1 ? 'seconds' : 'second');
+			    s = seconds + ' ' + (seconds > 1 || seconds == 0 ? 'seconds' : 'second');
 
 			if (days) {
 				if (days >= 4 || !hours)
